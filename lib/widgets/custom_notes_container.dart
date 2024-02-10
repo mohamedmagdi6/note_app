@@ -9,19 +9,19 @@ class CustomNotesListTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
       decoration: BoxDecoration(
-        color: Color(0xffFFCC80),
+        color: const Color(0xffFFCC80),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
-            title: Text(
+            title: const Text(
               'Flutter Tips',
               style: TextStyle(color: Colors.black, fontSize: 26),
             ),
             subtitle: Padding(
-              padding: EdgeInsets.symmetric(vertical: 16),
+              padding: const EdgeInsets.symmetric(vertical: 16),
               child: Text(
                 'build your career now with me ',
                 style: TextStyle(
@@ -30,13 +30,13 @@ class CustomNotesListTile extends StatelessWidget {
             ),
             trailing: IconButton(
               onPressed: () {},
-              icon: Icon(FontAwesomeIcons.trash),
+              icon: const Icon(FontAwesomeIcons.trash),
               color: Colors.black,
               iconSize: 24,
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 24),
+            padding: const EdgeInsets.only(right: 24),
             child: Text(
               'May21,2022',
               style:
