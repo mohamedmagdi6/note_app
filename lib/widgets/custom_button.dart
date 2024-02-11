@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
       // this code to avoid error that can be occured because of width.infinity
       height: 55,
       decoration: BoxDecoration(
-        color: KPrimaryColor,
+        color: kPrimaryColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Center(
