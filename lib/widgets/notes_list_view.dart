@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'custom_notes_container.dart';
+import 'custom_notes_list_tile.dart';
 
 class NotesListView extends StatelessWidget {
   const NotesListView({
@@ -9,13 +9,17 @@ class NotesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: 9,
-        itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.symmetric(vertical: 5),
-            child: CustomNotesListTile(),
-          );
-        });
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 16),
+      child: ListView.builder(
+          padding: EdgeInsets.zero,
+          itemCount: 9,
+          itemBuilder: (context, index) {
+            return const Padding(
+              padding: EdgeInsets.symmetric(vertical: 5),
+              child: CustomNotesListTile(),
+            );
+          }),
+    );
   }
 }

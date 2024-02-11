@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/custom_app_bar.dart';
-import '../widgets/notes_list_view.dart';
+import '../widgets/add_notes_bottom_sheet.dart';
+import '../widgets/notes_view_body.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -9,24 +9,17 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return AddNotesBottomSheet();
+              });
+        },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         child: const Icon(Icons.add),
       ),
-      body: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 40,
-            ),
-            CustomAppBar(),
-            Expanded(
-              child: NotesListView(),
-            )
-          ],
-        ),
-      ),
+      body: NotesViewBody(),
     );
   }
 }
