@@ -5,12 +5,12 @@ sealed class AddNotesState {}
 
 final class AddNotesInitial extends AddNotesState {}
 
-class AddNoteLoading extends AddNotesState {}
+class AddNoteLoadingState extends AddNotesState {}
 
-class AddNoteSuccess extends AddNotesState {}
+class AddNoteSuccessState extends AddNotesState {}
 
-class AddNoteFailure extends AddNotesState {
+class AddNoteFailureState extends AddNotesState {
   final String errMessage;
 
-  AddNoteFailure(this.errMessage);
+  AddNoteFailureState(this.errMessage);
 }
