@@ -24,7 +24,10 @@ class _AddNotesFormState extends State<AddNotesForm> {
       autovalidateMode: autovalidateMode,
       key: formKey,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: EdgeInsets.only(
+            left: 16,
+            right: 16,
+            bottom: MediaQuery.of(context).viewInsets.bottom),
         child: SingleChildScrollView(
           child: Column(
             children: [
