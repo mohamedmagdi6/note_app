@@ -15,7 +15,7 @@ class NotesView extends StatelessWidget {
           showModalBottomSheet(
               context: context,
               builder: (context) {
-                return AddNotesBottomSheet();
+                return const AddNotesBottomSheet();
               });
         },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
@@ -24,7 +24,7 @@ class NotesView extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      body: NotesViewBody(),
+      body: const NotesViewBody(),
     );
   }
 }
