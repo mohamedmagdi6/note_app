@@ -22,3 +22,5 @@ class NoteModel extends HiveObject {
     required this.subTitle,
   });
 }
+
+// flutter packages pub run build_runner build     => this is the code that run in terminal to generate file of type adaptor 

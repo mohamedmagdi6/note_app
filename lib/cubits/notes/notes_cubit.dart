@@ -11,12 +11,11 @@ class NotesCubit extends Cubit<NotesState> {
 
   fetchAllNotes() {
     // emit(NotesLoadingState());   NotesLoadingState  is not required because the data is inside the box and we no have to wait it .
-    try {
-      var notesBox = Hive.box<NoteModel>(kNotesBox);
-      List<NoteModel> notes = notesBox.values.toList();
-      emit(NotesSuccessState(notes));
-    } catch (e) {
-      emit(NotesFailureState('errorMessage => ${e.toString()}'));
-    }
+
+    var notesBox = Hive.box<NoteModel>(kNotesBox);
+    List<NoteModel> notes = notesBox.values.toList();
+    print('notes list from succes $notes');
+    emit(NotesSuccessState(notes));
+    return notes;
   }
 }
